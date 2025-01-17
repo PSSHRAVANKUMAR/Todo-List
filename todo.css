@@ -1,0 +1,156 @@
+body {
+    background: radial-gradient(circle, #2e003e, #000000 100%, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Grandstander', cursive;
+}
+
+/* #2e003e purple */
+.container {
+    background-color: black;
+    width: 800px;
+    height: auto;
+    border-radius: 10px; /* Subtle border-radius for the container */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a softer look */
+}
+
+h1 {
+    font-size: 50px; /* Bold and prominent */
+    color: violet; /* Fallback color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds depth */
+    letter-spacing: 2px; /* Elegance */
+    margin-bottom: 10px; /* Reduced margin to bring it closer to the quote */
+}
+
+p {
+    font-size: medium;
+    font-family: 'Playfair Display', cursive;
+    color: coral;
+    font-style: italic;
+    margin-top: 0; /* Removes default top margin */
+    padding: 0 20px; /* Slight padding for alignment */
+    text-align: center; /* Center aligns the quote */
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.input-container {
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; Ensure input and button align horizontally */
+}
+
+#todo-input {
+    height: 30px;
+    background-color: #27292B;
+    color: darkgrey; /* Dark Purple */
+    border-radius: 20px;
+    border: none;
+    flex: 2; /* Flexible width to make input span more space */
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Grandstander', cursive;
+    width:600px;
+}
+
+#todo-input:hover {
+    background-color: #27292B; /* Slightly darker for hover */
+}
+
+#add-btn {
+    padding: 12px;
+    background-color: purple; /* Magenta */
+    color: white;
+    margin-left: 10px; /* Space between input and button */
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: 'Grandstander', cursive;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    margin-top:10px;
+}
+
+
+#add-btn:hover {
+    background-color: #FF4DFF; /* Lighter Magenta on hover */
+}
+
+#todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Align list items vertically */
+    padding: 0;
+    margin: 20px auto; /* Center the list within the container */
+    align-items:center;
+}
+
+#todo-list li {
+    background: #DAB1DA; /* Light purple */
+    color: #4B0082; /* Dark Purple */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 30px; /* Rounded corners for each list item */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    width: 90%;
+    word-wrap: break-word; /* Breaks long words */
+    overflow: hidden; /* Hides overflowing content */
+    text-overflow: ellipsis; /* Adds ellipsis for long text */
+}
+
+.todo-text {
+    flex: 1; /* Make text take up the remaining space */
+    margin-right: 10px;
+    word-break: break-word; /* Ensures long words wrap to the next line */
+}
+
+#todo-list li button {
+    background-color: red; /* Light Coral */
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Rounded buttons */
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#todo-list li button:hover {
+    background-color: #ff0000; /* Slightly darker red on hover */
+}
+#back-btn {
+    /* position: absolute; /* Positioned at the bottom-left */
+    /* top: 60px;
+    left: 20px; */ 
+    text-decoration:underline;
+    font-weight:bold;
+    padding:  10px;
+    margin-left:10px;
+    background-color: black; 
+    color: red;
+    font-family: 'Grandstander', cursive;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.align{
+    align-items:center;
+    justify-content:center;
+    margin-right:20px;
+}
+
+#back-btn:hover {
+    background-color: #FF4DFF; /* Lighter magenta on hover */
+    color:white;
+    transform: scale(1.1); /* Slight zoom effect */
+}

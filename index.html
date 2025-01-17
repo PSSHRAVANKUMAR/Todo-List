@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Comic Sans MS, Comic Sans, cursive;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+            color: #b5b5b5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #89f336;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: bold;
+    position: relative;
+           }
+
+h1 span {
+    display: block;
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+h1 .line {
+    width: 600px;
+    height: 3px;
+    background-color: coral;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+
+
+        .container {
+            display: flex;
+            gap: 30px;
+            animation: slideIn 1.5s ease;
+            border: none;
+        }
+
+        .portal {
+            background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .portal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px #98FB98;
+        }
+
+        .portal img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portal:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  color: dark black;
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+        }
+
+        .portal h2 {
+            font-size: 1.8rem;
+            color:#F5F5DC;
+        }
+
+        .portal p {
+            font-size: 1rem;
+            color: #b5b5b5;
+            opacity: 0.9;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: #b5b5b5;
+            animation: fadeIn 2s ease;
+        }
+
+        .portal:hover .card-content {
+  opacity: 1;
+}
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Let's Get It Done
+        <span>Turn your goals into achievements today</span>
+        
+    <div class="line"></div>
+    </h1>
+    
+    <div class="container">
+        <!-- Card for Today's Mission -->
+        <div class="portal" onclick="window.location.href= 'to_do.html';">
+            <img src="https://img.freepik.com/premium-vector/typography-motivational-quotes-design_760723-126.jpg?ga=GA1.1.1963760312.1735308970&semt=ais_hybrid" alt="Today's Mission">
+            <div class="card-content">
+                <h2>Missions for Today</h2>
+                <p>
+                    "Plan your work and work your plan"</p>
+            </div>
+        </div>
+
+        <!-- Card for Monthly Goals -->
+        <div class="portal"  onclick="window.location.href= 'mounth.html';">
+            <img src="https://img.freepik.com/premium-vector/workout-quote-success-starts-with-discipline_586337-74.jpg?ga=GA1.1.1963760312.1735308970&semt=ais_hybrid" alt="Monthly Goals">
+            <div class="card-content">
+                <h2>Monthly Goals</h2>
+                <p>Set monthly milestones and watch your growth blossom.</p>
+            </div>
+        </div>
+
+        <!-- Card for Bucket List -->
+        <div class="portal"  onclick="window.location.href= 'bucket.html';">
+            <img src="https://img.freepik.com/free-vector/lettering-background-with-inspirational-message-ornaments_23-2147775215.jpg?ga=GA1.1.1963760312.1735308970&semt=ais_hybrid" alt="Bucket List">
+            <div class="card-content">
+                <h2>Bucket List</h2>
+                <p>Dream big and accomplish your lifelong aspirations.</p>
+            </div>
+        </div>
+    </div>
+    <footer>© 2025 Your To-Do List App</footer>
+</body>
+</html>
